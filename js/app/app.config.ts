@@ -145,6 +145,8 @@ export default function () {
       },
       plugins: [
         withAndroidProfileable,
+        "expo-video",
+        "expo-web-browser",
         streamplaceReactNativeWebRTC,
         ["expo-sqlite", { useSQLCipher: true }],
         "expo-file-system",

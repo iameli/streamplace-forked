@@ -27,8 +27,16 @@ config = withTamagui(config, {
 
 const nativeOverrides = {
   crypto: "react-native-quick-crypto",
+  "node:crypto": "react-native-quick-crypto",
   stream: "readable-stream",
+  "node:buffer": "buffer",
+  "node:util": "util",
+  "node:http": path.resolve(__dirname, "./empty.mjs"),
+  "node:https": path.resolve(__dirname, "./empty.mjs"),
+  "node:events": "events",
 };
+
+const overrides = {};
 
 config.resolver.resolveRequest = (context, moduleName, platform) => {
   if (platform !== "web") {
@@ -36,6 +44,11 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
       if (moduleName === key) {
         return context.resolveRequest(context, value, platform);
       }
+    }
+  }
+  for (const [key, value] of Object.entries(overrides)) {
+    if (moduleName === key) {
+      return context.resolveRequest(context, value, platform);
     }
   }
   // otherwise chain to the standard Metro resolver.
