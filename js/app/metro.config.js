@@ -62,10 +62,6 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
 config.resolver.sourceExts.push("mjs");
 config.resolver.assetExts.push("md");
 
-config.resolver.unstable_conditionNames.push(
-  "@streamplace/dev",
-  "react-native",
-  "browser",
-);
+config.resolver.unstable_conditionNames.push("@streamplace/dev", "browser");
 
 module.exports = config;
