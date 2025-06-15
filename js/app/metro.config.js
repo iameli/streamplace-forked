@@ -25,6 +25,8 @@ config = withTamagui(config, {
   outputCSS: "./tamagui-web.css",
 });
 
+const overrides = {};
+
 const nativeOverrides = {
   crypto: "react-native-quick-crypto",
   "node:crypto": "react-native-quick-crypto",
@@ -36,9 +38,11 @@ const nativeOverrides = {
   "node:events": "events",
 };
 
-const overrides = {};
-
 config.resolver.resolveRequest = (context, moduleName, platform) => {
+  if (moduleName.includes("zustand")) {
+    const result = require.resolve(moduleName);
+    return context.resolveRequest(context, result, platform);
+  }
   if (platform !== "web") {
     for (const [key, value] of Object.entries(nativeOverrides)) {
       if (moduleName === key) {
