@@ -81,7 +81,7 @@
     "react-native": "0.79.3",
     "react-native-gesture-handler": "~2.24.0",
     "react-native-markdown-display": "^7.0.2",
-    "react-native-quick-crypto": "^0.7.7",
+    "react-native-quick-crypto": "^0.7.14",
     "react-native-reanimated": "~3.18.0",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.11.1",
