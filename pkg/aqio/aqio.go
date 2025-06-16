@@ -7,7 +7,7 @@ import (
 	"github.com/johncgriffin/overflow"
 )
 
-// ReadWriteSeeker is an in-memory io.ReadWriteSeeker implementation
+// ReadWriteSeeker is an in-memory io.ReadWriteSeeker implementation!
 type ReadWriteSeeker struct {
 	buf []byte
 	pos int
