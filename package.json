@@ -15,7 +15,7 @@
     "postinstall": "husky",
     "build": "pnpm --stream -r run build",
     "prepare": "husky",
-    "release": "lerna publish --force-publish",
+    "release": "lerna version --force-publish=@streamplace/app",
     "precommit": "make precommit",
     "app": "cd js/app && pnpm run",
     "desktop": "cd js/desktop && pnpm run",
