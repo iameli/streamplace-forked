@@ -32,7 +32,6 @@
     "@atproto/oauth-client-browser": "^0.3.16",
     "@bacons/text-decoder": "^0.0.0",
     "@emoji-mart/react": "^1.1.1",
-    "@rainbow-me/rainbowkit": "2.2.0",
     "@react-native-firebase/app": "^22.2.1",
     "@react-native-firebase/messaging": "^22.2.1",
     "@react-navigation/bottom-tabs": "^6.6.1",
@@ -97,9 +96,7 @@
     "streamplace": "workspace:*",
     "tamagui": "^1.126.16",
     "ua-parser-js": "^2.0.0-rc.1",
-    "uuid": "^11.0.2",
-    "viem": "^2.21.40",
-    "wagmi": "2.12.25"
+    "uuid": "^11.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
