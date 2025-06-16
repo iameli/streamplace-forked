@@ -96,7 +96,8 @@
     "streamplace": "workspace:*",
     "tamagui": "^1.126.16",
     "ua-parser-js": "^2.0.0-rc.1",
-    "uuid": "^11.0.2"
+    "uuid": "^11.0.2",
+    "viem": "^2.21.44"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
